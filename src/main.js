@@ -175,7 +175,8 @@ function parseLineWithOutput(line, output) {
     return line;
 }
 /**
- * Function that loads a file by updating the global variable loadedCSV.
+ * Function that loads and stores a CSV into a global variable, and returns a
+ * string indicating success of loading the file
  * @param filePath the file to load
  * @returns a string indicating the success of loading
  */
@@ -193,8 +194,8 @@ function load_file(filePath) {
     }
 }
 /**
- * Function that takes in a parsed CSV file in the form of a 2D array and returns an HTML
- * element displaying the parsed CSV data as a table.
+ * Function that takes in a parsed CSV file in the form of a 2D array and
+ * returns an HTMLElement displaying the parsed CSV data as a table.
  * @param csvToView the parsed CSV file we are trying to view
  * @returns an HTMLTableElement containing all of the parsed CSV file data
  */
@@ -221,8 +222,8 @@ function view(csvToView) {
     return loadedCSVTable;
 }
 /**
- * Function that takes in the results of search function (2D array) and returns an HTML
- * element displaying the search CSV data as a table.
+ * Function that takes in the results of search function (2D array) and returns
+ * an HTMLElement displaying the search CSV data as a table.
  * @param resToView the results of the search function we are displaying
  * @returns an HTMLTableElement containing all of the search results
  */
@@ -243,8 +244,10 @@ function displayRes(resToView) {
     return loadedResTable;
 }
 /**
- * Function that takes an a column identifier (index or name) and value to search the
- * loaded parsed CSV file for and returns an HTML element displaying the search results as a table.
+ * Function that takes an a column identifier (index or name) and value to
+ * search the loaded parsed CSV file for and returns an HTML element displaying
+ * the search results as a table.
+ *
  * @param identifier the column identifer specifying the search on
  * @param value the value we are searching for in the loaded file
  * @returns an HTMLTableElement containing all of the search results
@@ -265,10 +268,11 @@ function search(identifier, value) {
     return displayRes(searchRes);
 }
 /**
- * Function that mocks a backend function for search by taking in a column identifier
- * (index or name) and value to search the loaded parsed CSV file for and returns an
- * a array of row indices in which the value is found. No actual searching takes place, as
- * the function in reality just accesses some mocked data.
+ * Function that mocks a backend function for search by taking in a column
+ * identifier (index or name) and value to search the loaded parsed CSV file
+ * for and returns an array of row indices in which the value is found. No
+ * actual searching takes place, as the function in reality just accesses some
+ * mocked data.
  * @param identifier the column identifer specifying the search on
  * @param value the value we are searching for in the loaded file
  * @returns an array containing all of the row indices the value is found on with the column specification

@@ -16,7 +16,8 @@
 <body>
     <!-- Tell the browser what to show if JavaScript/TypeScript is disabled. -->
     <noscript>This example requires JavaScript to run.</noscript>
-    <!-- Prepare a region of the page to hold the entire REPL interface -->
+    <div id="root">
+        <!-- Prepare a region of the page to hold the entire REPL interface -->
     <h1>command line interface</h1>
     <div id="wrapper">
         <div class="repl">
@@ -43,6 +44,8 @@
     <!-- Load the script! Note: the .js extension is because browsers don't use TypeScript
     directly. Instead, the author of the site needs to compile the TypeScript to JavaScript. -->
     <script type=module src="../src/main.js"></script>
+    </div>
+    
 </body>
 
 </html>
